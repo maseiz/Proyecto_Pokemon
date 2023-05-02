@@ -103,15 +103,26 @@ body {
   align-items: center;
   
 }
+
+.buscador {
+  width: 80%;
+}
 #busqueda {
-  width: 600px;
- 
+  margin-top: 10px;
+  width: 900px;
+  height: 50px;
+  border-radius: 7px;
+}
+.btn img{
+  background-color: #aba6a6;
   border-radius: 5px;
+  
+  height: 50px;
 }
 .campo {
   display: flex;
   margin-top: 20px;
-  width: 600px;
+  width: 900px;
   text-align: center;
 }
 .parrafoVerde {
@@ -120,6 +131,8 @@ body {
   background-color: #3faa11;
   border-radius: 5px;
   margin-left: 40px;
+  font-size: large;
+  padding-top: 7px;
  
 }
 p {
@@ -128,25 +141,25 @@ p {
 
 .ordenar {
   display: flex;
-  align-items: center;
+  text-align: end;
 }
- 
 .ordenarPor h4{
-  position: relative;
-  justify-content:center;
+  cursor: pointer;
+  justify-content: flex-end;
   font-size:large;
   display: flex;
-  width: 50%;
-  margin-left: 700px;
+  width: 40%;
+  margin-left: 900px;
   padding-top: 20px;
+ 
   }
 
 .numeroInferior{
-  
+  cursor: pointer;
   display: flex;
-  width: 100%;
+  width: 20%;
   justify-content: space-between;
-  margin-left: 200px;
+  margin-left: 370px;
   margin-right: 20px;
   background-color: #333;
   border-radius: 5px;
@@ -155,12 +168,13 @@ p {
   margin-top: 10px;
 }
 .numeroInferior h4{
+  padding-top: 7px;
   font-size: medium;
-  align-items: center;
+ 
 }
   .logoPokemon img{
     margin-left: 35px;
-    width: 30%;
+    width: 25%;
     height: auto;
     padding:10px;
      
@@ -191,7 +205,7 @@ p {
   background-image: url("./blob.svg");
   background-repeat: no-repeat;
   background-position: center;
-  
+  width: 80%;
 
 }
 
@@ -221,11 +235,15 @@ p {
 
 .pagination {
   width: 90%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 50px;
+  justify-content: flex-end;
+  margin-left: 150px;
 }
-
+#previous a{
+  color: #a60ad2;
+}
+#next a{
+  color: #a60ad2;
+}
 .card-container {
   position: relative;
   width: 100%;
@@ -251,13 +269,51 @@ p {
   transform: rotateY(180deg);
   position: absolute;
   top: 0%;
+  padding: 30px;;
 }
 
 
+.footer {
+  display: grid;
+  grid-template-columns: 3fr 3fr 0.5fr 0.5fr 0.5fr 0.5fr 3fr 3fr;
+  font-size: x-small;
+  height: 150px;
+  gap: 10px;
+  padding: 20px;
+  align-items: center;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  }
 
+h6 {
+  padding-left: 30px;
+}
+  .footerImagesFb, .footerImagesYt, .footerImagesTw, .footerImagesIg {
+    width: 50px;
+    height: 50px;
+  }
+  
+.footerImagesFb img{
+  width: 40px;
+  }
+.footerImagesYt img{
+  width: 40px;
+}
+.footerImagesTw img{
+  width: 40px;
+}
+.footerImagesIg img{
+  width: 40px;
+}
 
-
-
+.footerThree {
+padding-left: 60px;
+}
+.footerThree img{
+  padding-left: 20px;
+  }
     /* Estilos para dispositivos móviles */
 
     @media screen and (max-width: 768px) {
