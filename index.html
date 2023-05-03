@@ -40,28 +40,31 @@
             </nav>
         </div>
         <div class="menuGrande">
-            <img src="/img/004.png" alt="inicio">
-            <img src="/img/005.png" alt="inicio">
-            <img src="/img/006.png" alt="inicio">
-            <img src="/img/007.png" alt="inicio">
-            <img src="/img/008.png" alt="inicio">
-            <img src="/img/009.png" alt="inicio">
-            <img src="/img/010.png" alt="inicio">
+            <img src="/img/004.png" alt="Inicio">
+            <a href="index.html"><img src="/img/005.png" alt="Pokédex"></a>
+            <img src="/img/006.png" alt="Videojuegos">
+            <img src="/img/007.png" alt="Cartas">
+            <img src="/img/008.png" alt="TV">
+            <img src="/img/009.png" alt="Play!">
+            <img src="/img/010.png" alt="Noticias">
         </div>
 
         <div class="logoPokemon">
         <img src="/img/logopoke.png" alt="logo">
         </div>
     </header>
+    <form>
     <div class="buscadorYParrafo">
     <div class="buscador">
         <h4>Nombre o número</h4>
          <div class="campo">
             <label for="busqueda"></label>
-            <input type="text" id="busqueda" name="q" required>
+            <input type="text" id="busqueda" name="q" required placeholder="Buscar">
             <button class="btn" type="submit">
                 <img src="/img/lupa.png" alt="lupa">
             </button>
+        </form>
+            
         </div>
     </div>
             <div class="parrafoVerde">
@@ -79,8 +82,9 @@
             </div>
     </div>
 </div>
+<div id="search-results">
 <div class="pokemon-container"></div>
-
+</div> 
     <nav class="pagination">
         <ul class="pagination">
           <li id="previous" class="page-item"><a class="page-link" href="#">Anterior</a></li>
@@ -90,7 +94,7 @@
 
      <div id="spinner" class="spinner-border text-light" role="status">
         <span class="visually-hidden">Loading...</span>
-        </div> 
+     </div> 
 <footer>
     <div class="footer">
     

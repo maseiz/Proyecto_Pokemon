@@ -5,6 +5,7 @@ hamburgerButton.addEventListener('click', () => {
 menuHamburguesa.classList.toggle('menu-hidden');
 });
 
+
 const pokemonContainer = document.querySelector(".pokemon-container");
 const spinner = document.querySelector("#spinner");
 
@@ -25,6 +26,7 @@ next.addEventListener("click", () => {
     fetchPokemons(offset, limit);
 })
 
+
 function fetchPokemon (id) {
     fetch(`https://pokeapi.co/api/v2/pokemon/${id}/`)
     .then((res) => res.json())
@@ -40,7 +42,6 @@ function fetchPokemons(offset, limit) {
         fetchPokemon(i);
     }
 }
-
 
 function createPokemon(pokemon){
     const flipCard = document.createElement("div");
@@ -123,5 +124,83 @@ function removeChildNodes(parent) {
    }
 }
 
-
 fetchPokemons(offset, limit);
+
+// BUSCADOR
+// Obtén los elementos HTML necesarios
+const searchForm = document.querySelector('form');
+const searchInput = document.getElementById('busqueda');
+const searchResults = document.getElementById('search-results');
+ // Agrega un evento de escucha al formulario para la búsqueda cuando se envíe
+searchForm.addEventListener('submit', (event) => {
+  event.preventDefault(); // Evita que se recargue la página al enviar el formulario
+  performSearch();
+});
+ async function performSearch() {
+  const query = searchInput.value.trim();
+   if (query.length === 0) return; // Salir si el valor de búsqueda es vacío
+   showSpinner();
+   const pokemonData = await searchPokemon(query);
+   if (pokemonData) {
+    displayPokemon(pokemonData);
+    
+  } else {
+    displayNoResults();
+  }
+   hideSpinner();
+}
+
+
+
+
+
+
+
+ async function searchPokemon(query) {
+  try {
+    const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${query.toLowerCase()}`);
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error('Error fetching Pokemon data:', error.message);
+  }
+   return null;
+}
+ function displayPokemon(pokemonData) {
+  searchResults.innerHTML = `
+    <div class="card">
+      <img src="${pokemonData.sprites.front_default}" alt="${pokemonData.name} image">
+      <h3>${pokemonData.name.toUpperCase()}</h3>
+      <p>ID: ${pokemonData.id}</p>
+      <a href="index.html">
+      <button class="volver" type="submit">
+                <img src="/img/005.png" alt="Pokédex"><p>Volver</p></img>
+      </button>
+      </a>
+    </div>
+    `;
+    const pagination = document.querySelector('.pagination');
+    pagination.style.display = 'none';
+}
+ function displayNoResults() {
+  searchResults.innerHTML = `
+    <div class="no-results">
+      <p>No se encontraron resultados.</p>
+      <a href="index.html">
+      <button class="volver" type="submit">
+                <img src="/img/005.png" alt="Pokédex"><p>Volver</p>
+            </button>
+      </a>
+    </div>
+  `;
+  const noResults = document.querySelector('.pagination');
+    noResults.style.display = 'none';
+}
+ function showSpinner() {
+  spinner.style.display = 'block';
+}
+ function hideSpinner() {
+  spinner.style.display = 'none';
+}
+ // Realiza una búsqueda inicial
+performSearch();

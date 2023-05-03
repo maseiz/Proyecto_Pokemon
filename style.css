@@ -232,7 +232,34 @@ p {
   top: 50%;
   left: 50%;
 }
+.card { 
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  width: 20%; 
+  margin: 30px auto; 
+  
+} 
 
+.card img{
+  width: 70%;
+  
+}
+
+.no-results { 
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  width: 20%; 
+  margin: 30px auto; 
+  
+} 
+.volver{
+  margin: 20px;
+  border-radius: 5px;
+}
 .pagination {
   width: 90%;
   justify-content: flex-end;
