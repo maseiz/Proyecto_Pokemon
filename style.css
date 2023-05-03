@@ -1,12 +1,16 @@
 
+
+
 body {
-    
+    background-image: url("/img/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
     font-family: 'Oswald', sans-serif;
     margin: 0;
     padding: 0;
   }
-  
-  
+
+    
   @media (min-width: 1024px) {
     .menu-hamburguesa {
       display: none;
@@ -15,6 +19,7 @@ body {
   
   .header {
     position: relative;
+    
   }
 
 
