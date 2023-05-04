@@ -536,6 +536,17 @@ h6 {
     padding: 5px;
     font-size: x-small;
   }
+ 
+    .card{
+      width: 100%;
+    }
+    .volver p{
+      text-align: center;
+    }
+    .no-results{
+      width: 100%;
+     text-align: center;
+  }
   .footer {
     display: flex;
     flex-direction: column;
