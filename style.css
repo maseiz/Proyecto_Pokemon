@@ -1,5 +1,5 @@
 body {
-  background-image: url("/img/background.jpg");
+  background-image: url("/img/background2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   font-family: "Oswald", sans-serif;
@@ -92,8 +92,9 @@ body {
   cursor: pointer;
 }
 .buscadorYParrafo {
+  position: absolute;
+  width: 100%;
   display: flex;
-  justify-content: space-between;
   background-color: #333;
   color: #fff;
   padding: 20px 50px 20px 30px;
@@ -101,7 +102,7 @@ body {
 }
 
 .buscador {
-  width: 80%;
+  width: 100%;
 }
 #busqueda {
   margin-top: 10px;
@@ -112,7 +113,6 @@ body {
 .btn img {
   background-color: #aba6a6;
   border-radius: 5px;
-
   height: 50px;
 }
 .campo {
@@ -123,47 +123,66 @@ body {
 }
 .parrafoVerde {
   display: flex;
-  width: 50%;
+  position: relative;
+  width: 40%;
   background-color: #3faa11;
   border-radius: 5px;
-  margin-left: 40px;
+  margin-left: 950px;
   font-size: large;
-  padding-top: 7px;
+  margin-top: 25px;
+  padding-left: 20px;
 }
-p {
+.parrafoVerde p {
   padding: 10px;
+  color: #ffffff;
 }
 
 .ordenar {
+  position: relative;
   display: flex;
-  text-align: end;
+  margin-left: 40px;
+  margin-top: 35px;
 }
-.ordenarPor h4 {
-  cursor: pointer;
-  justify-content: flex-end;
-  font-size: large;
+
+.ordenar-por{
+  position: relative;
+  left: 160px;
+}
+
+.ordenarPor h4{
+  
   display: flex;
-  width: 40%;
+  cursor: pointer;
+  justify-content: center;
+  margin-top: 20px;
+  align-items:flex-end;
+  font-size: large;
+  background-color: #333;
+  border-radius: 5px;
+  color: #fff;
+  width: 20%;
   margin-left: 900px;
-  padding-top: 20px;
+  padding: 10px;
+
 }
 
 .numeroInferior {
   cursor: pointer;
   display: flex;
   width: 20%;
-  justify-content: space-between;
-  margin-left: 370px;
-  margin-right: 20px;
+  justify-content: space-around;
+  margin-left: 250px;
   background-color: #333;
   border-radius: 5px;
-  color: #d9cdcd;
+  color: #f8f8f8;
   padding: 5px;
   margin-top: 10px;
 }
 .numeroInferior h4 {
-  padding-top: 7px;
+  width: 50%;
+  padding-top: 15px;
   font-size: medium;
+  text-align: center;
 }
 .logoPokemon img {
   margin-left: 35px;
@@ -453,35 +472,22 @@ h6 {
   }
 
   .ordenar {
-    display: flex;
-    width: 100%;
-    justify-items: left;
-    text-align: left;
-    align-items: flex-start;
-  }
-  .ordenar h4 {
-    display: flex;
-    align-items: flex-start;
+    display: inline-block;
     width: 100%;
     text-align: left;
-    justify-items: left;
-    color: #333;
-    font-size: small;
+
   }
 
-  .ordenarPor {
-    display: flex;
-    text-align: left;
-    align-items: flex-start;
-    justify-items: left;
-    color: #333;
-    font-size: small;
+  .ordenarPor h4 {
+    display: inline-block;
+     font-size: small;
+     text-align: left;
   }
+
 
   .numeroInferior {
-    display: flex;
-    width: 100%;
-
+    display: inline-block;
+    text-align: left;
     justify-content: space-around;
     background-color: #333;
     color: #d9cdcd;
@@ -552,9 +558,9 @@ h6 {
     flex-direction: column;
     text-align: center;
     gap: 0%;
-    margin: 1%;
+    margin: 5%;
     padding: 20px;
-    font-size: x-small;
+    font-size: xx-small;
     height: 500px;
     background-color: #333;
     color: #fff;
