@@ -1,5 +1,5 @@
 body {
-  background-image: url("/img/background2.jpg");
+  background-image: url("/img/pokemon-gif-4k-min.gif");
   background-repeat: no-repeat;
   background-size: cover;
   font-family: "Oswald", sans-serif;
@@ -87,9 +87,13 @@ body {
   transition: max-height 0.3s ease-in-out;
 }
 .menuGrande {
+ 
   padding: 20px 100px 20px 100px;
   text-align: center;
   cursor: pointer;
+  border: #fff;
+  background-color: #c168f1;
+  opacity: 0.7;
 }
 .buscadorYParrafo {
   position: absolute;
@@ -260,6 +264,7 @@ body {
   align-items: center;
   width: 20%;
   margin: 30px auto;
+  color: #fff;
 }
 .volver {
   margin: 20px;
