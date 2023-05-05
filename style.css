@@ -352,9 +352,24 @@ h6 {
   padding-left: 20px;
 }
 
+
+
+
+
+
+
+
+
+
+
+
 /* Estilos para dispositivos móviles */
 
 @media only screen and (max-width: 768px) {
+
+  .body{
+    background-color: #c982dc;
+   }
   /* ocultamos el menú Desktop */
   .menuGrande {
     display: none;
@@ -405,6 +420,7 @@ h6 {
   }
 
   .menu a {
+   
     margin-left: 40px;
     padding: 0.5rem;
     color: #333;
@@ -422,30 +438,30 @@ h6 {
     color: #fff;
   }
   .logoPokemon img {
-    display: flex;
+    display: block;
     width: 50%;
     margin-left: 22%;
     padding-bottom: 20px;
   }
   .campo {
     width: 100%;
+    margin-left: 20px;
   }
 
   .buscadorYParrafo {
-    display: block;
-    width: 100%;
+    width: auto;
     font-size: large;
   }
   .buscador {
-    padding: 10px 20px 20px 20px;
     background-color: #333;
     margin-left: -40px;
   }
   .buscador h4 {
-    padding-left: 10px;
+    margin-left: 40px;
     font-size: medium;
     color: #ede2e2;
     margin-bottom: -10%;
+    padding-bottom: 10px;
   }
   p {
     margin: 0;
@@ -454,49 +470,79 @@ h6 {
     text-align: left;
   }
   #busqueda {
+    display:flex;
+    position: relative;
     border-radius: 5px;
-    margin-left: 10px;
+    margin-left: 15px;
+    width: 100%;
   }
   .btn img {
-    justify-content: left;
+    display:flex;
+    position: absolute;
     height: 46px;
-    margin-top: 4px;
-    margin-left: -10px;
+    margin-left: 5%;
+    top: 45%;
+     
   }
   .parrafoVerde {
-    margin-left: -10px;
-    margin-bottom: 10px;
-    width: 113%;
+    margin-left: 0px;
+   
+    top:100px;
+    width: 100%;
     background-color: #3faa11;
     color: #fffefe;
   }
-
-  .ordenar {
-    display: inline-block;
-    width: 100%;
-    text-align: left;
-
+ 
+ .ordenarPor {
+    margin-top:40px;
+    width: 50%; 
+    text-align: center;
+    
+       
   }
-
-  .ordenarPor h4 {
-    display: inline-block;
-     font-size: small;
-     text-align: left;
+  
+  .ordenar-por{
+    position: relative;
+    left: -940px;
+    height: 50px;
   }
-
-
+  
+  .ordenarPor h4{
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+    font-size: small;
+    background-color: #333;
+    border-radius: 5px;
+    color: #fff;
+    width: 80%;
+    padding: 10px;
+  
+  }
+  
   .numeroInferior {
-    display: inline-block;
-    text-align: left;
+    
+    position: absolute;
+    cursor: pointer;
+    width: auto;
+    height: 50px;
     justify-content: space-around;
     background-color: #333;
-    color: #d9cdcd;
+    border-radius: 5px;
+    color: #f8f8f8;
     padding: 5px;
+    left: -150px;
+    top: 55px;
+    
   }
   .numeroInferior h4 {
-    font-size: medium;
+    width: 100%;
+    padding-top: 7px;
+    font-size: small;
+    text-align: center;
+    border: #dfcde4;
   }
-
   .pokemon-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -504,6 +550,7 @@ h6 {
     margin-left: 5px;
     margin-right: 5px;
     margin-bottom: 10px;
+    
   }
   .pagination {
     width: 40%;
@@ -519,6 +566,12 @@ h6 {
     transition: transform 0.8s;
     transform-style: preserve-3d;
   }
+    .pokemon-block p {
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+   
+  }
 
   .flip-card:hover .card-container {
     transform: rotateY(180deg);
@@ -528,6 +581,7 @@ h6 {
   .pokemon-block-back {
     width: 100%;
     height: 100%;
+    
     backface-visibility: hidden;
   }
 
@@ -551,16 +605,17 @@ h6 {
     }
     .no-results{
       width: 100%;
-     text-align: center;
+      text-align: center;
+      color: #fff;
   }
   .footer {
     display: flex;
     flex-direction: column;
     text-align: center;
     gap: 0%;
-    margin: 5%;
     padding: 20px;
     font-size: xx-small;
+    width: 100%;
     height: 500px;
     background-color: #333;
     color: #fff;
@@ -662,4 +717,5 @@ h6 {
     justify-content: center;
 
   }
+
 }
